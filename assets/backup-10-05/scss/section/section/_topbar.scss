@@ -1,0 +1,95 @@
+.datum_topbar{
+	padding: 25px 0;
+	background-color: $white;
+	.datum_row {
+		align-items: center;
+		.datum_topbar_search{
+			-ms-flex: 0 0 33.333333%;
+			flex: 0 0 33.333333%;
+			max-width: 33.333333%;
+			position: relative;
+			width: 100%;
+			padding-right: 15px;
+			@media #{$large-mobile} {                  
+				-ms-flex: 0 0 100%;
+				flex: 0 0 100%;
+				max-width: 100%;
+				padding-right: 0px;
+			}
+			.datum_topbar_search_box{
+				width: 100%;
+				margin-bottom: 0;
+				background: url(../images/icons/search.svg) no-repeat 96% center;
+				border-radius: $border-radius4;
+			}
+		}
+		.datum_topbar_slider{
+			position: relative;
+			width: 100%;
+			-ms-flex: 0 0 66.666667%;
+			flex: 0 0 66.666667%;
+			max-width: 66.666667%;
+			@media #{$large-mobile} {                  
+				-ms-flex: 0 0 100%;
+				flex: 0 0 100%;
+				max-width: 100%;
+				margin-top: 20px;
+			}
+			.datum_search_keyword{
+				.slick-slide{
+					margin-right:5px;
+					margin-left:5px;
+					.key_word{
+						background-color: $white-secondary;
+						padding: 4px 12px;
+						border:1px $solid-border $border-grey;
+						text-align: center;
+						border-radius: 50px;
+						a{
+							color: $black;
+							font-size: $font-size14;
+						}
+					}
+				}
+				.slick-prev{
+					position: absolute;
+					top: 19px;
+					bottom: 0;
+					left: 0;
+					z-index: 9;
+					font-size: $font-size0;
+					border: none;
+					height: 50px;
+					width: 60px;
+					background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 92%);
+					&:before {
+						content: url(../images/icons/prev-arrow.svg);
+						left: 0;
+						position: absolute;
+						top: 11px;
+					}
+				}
+				.slick-next{
+					position: absolute;
+					top: 19px;
+					bottom: 0;
+					right: 0;
+					z-index: 9;
+					font-size: $font-size0;
+					height: 50px;
+					width: 60px;
+					background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+					&:before {
+						content: url(../images/icons/next-arrow.svg);
+						right: 0;
+						position: absolute;
+						top: 11px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+

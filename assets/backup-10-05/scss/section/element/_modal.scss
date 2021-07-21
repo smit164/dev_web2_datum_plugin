@@ -1,0 +1,313 @@
+/*  modals   */
+
+
+#datum_login_popup{
+	&.datum_overlay {
+  		position: fixed;
+	  	top: 0;
+	  	bottom: 0;
+	  	left: 0;
+	  	right: 0;
+	  	background: rgba(0, 0, 0, 0.7);
+	  	transition: opacity 500ms;
+	  	visibility: hidden;
+	  	opacity: 0;
+	  	z-index: 9;
+	  	&:target {
+	  		visibility: visible;
+  			opacity: 1;
+	  	}
+	  	.datum_login_popupbox{
+	  		margin: 70px auto;
+			padding: 20px;
+			background: #fff;
+			border-radius: 5px;
+			width: 100%;
+			max-width: 50%;
+			position: relative;
+			transition: all 5s ease-in-out;
+			@media #{$tablet-device} {                  
+		    	max-width: 90%;
+  			}
+			@media #{$large-mobile} {                  
+		    	max-width: 90%;
+		    	margin: 15px;
+  			}
+			h2{
+				margin-top: 0;
+			  	color: $black;
+			  	font-size: $font-size24;
+			  	margin-bottom: 0;
+			}
+			p{
+				margin: 0;
+				font-size: $font-size16;
+				color: $font-secondary-color;
+			}
+			.datum_login_close{
+				position: absolute;
+			  	top: 20px;
+			  	right: 15px;
+			  	transition: all 200ms;
+			  	font-size: $font-size30;
+			  	font-weight: $font-regular;
+			  	text-decoration: none;
+			  	color: $black;
+			  	opacity: 0.5;
+			  	&:hover {
+			  		opacity: 1;
+			  	}
+			}
+			.datum_login_content {
+				.datum_form-control {
+					width: 100%;
+					margin-bottom: 15px;
+				}
+				p{
+					margin-bottom: 20px;
+					#datum_forgot_password{
+						text-decoration: underline;
+					}
+				}
+				.datum_btn_primary {
+					@media #{$large-mobile} {  
+						width: 100%;
+						margin-right: 0;
+						margin-bottom: 15px;
+					}
+				}
+				.datum_btn_grey {
+					@media #{$large-mobile} {  
+						width: 100%;
+						margin-right: 0;
+						text-align: center;
+					}
+				}
+			}
+	  	}
+	}
+}
+
+#datum_signup_popup {
+	&.datum_overlay {
+  		position: fixed;
+	  	top: 0;
+	  	bottom: 0;
+	  	left: 0;
+	  	right: 0;
+	  	background: rgba(0, 0, 0, 0.7);
+	  	transition: opacity 500ms;
+	  	visibility: hidden;
+	  	opacity: 0;
+	  	z-index: 9;
+	  	overflow: scroll; 
+	  	&:target {
+	  		visibility: visible;
+  			opacity: 1;
+	  	}
+	  	.datum_login_popupbox{
+	  		margin: 70px auto;
+			padding: 20px;
+			background: #fff;
+			border-radius: 5px;
+			width: 100%;
+			max-width: 80%;
+			position: relative;
+			transition: all 5s ease-in-out;
+			@media #{$tablet-device} {                  
+		    	max-width: 90%;
+  			}
+			@media #{$large-mobile} {                  
+		    	max-width: 90%;
+		    	margin: 15px;
+  			}
+			h2{
+				margin-top: 0;
+			  	color: $black;
+			  	font-size: $font-size24;
+			  	margin-bottom: 0;
+			}
+			p{
+				margin: 0;
+				font-size: $font-size16;
+				color: $font-secondary-color;
+			}
+			.datum_login_close{
+				position: absolute;
+			  	top: 20px;
+			  	right: 15px;
+			  	transition: all 200ms;
+			  	font-size: $font-size30;
+			  	font-weight: $font-regular;
+			  	text-decoration: none;
+			  	color: $black;
+			  	opacity: 0.5;
+			  	&:hover {
+			  		opacity: 1;
+			  	}
+			}
+			.datum_btn_primary {
+				@media #{$large-mobile} {  
+					width: 100%;
+					margin-right: 0;
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+}
+
+#datum_thankyou_popup {
+	&.datum_overlay {
+  		position: fixed;
+	  	top: 0;
+	  	bottom: 0;
+	  	left: 0;
+	  	right: 0;
+	  	background: rgba(0, 0, 0, 0.7);
+	  	transition: opacity 500ms;
+	  	visibility: hidden;
+	  	opacity: 0;
+	  	z-index: 9;
+	  	overflow: scroll; 
+	  	&:target {
+	  		visibility: visible;
+  			opacity: 1;
+	  	}
+	  	.datum_login_popupbox{
+	  		margin: 70px auto;
+			padding: 70px 20px;
+			background: #fff;
+			border-radius: 5px;
+			width: 100%;
+			max-width: 40%;
+			position: relative;
+			transition: all 5s ease-in-out;
+			text-align: center;
+			@media #{$tablet-device} {                  
+		    	max-width: 90%;
+  			}
+			@media #{$large-mobile} {                  
+		    	max-width: 90%;
+		    	margin: 15px;
+  			}
+			h3{
+				margin-top: 0; 
+			  	color: $black;
+			  	font-size: $font-size24;
+			  	margin-bottom: 25px;
+			}
+			.datum_verification_img{
+				width: 80px;
+				margin-bottom: 25px;
+			}
+			.datum_login_close{
+				position: absolute;
+			  	top: 20px;
+			  	right: 15px;
+			  	transition: all 200ms;
+			  	font-size: $font-size30;
+			  	font-weight: $font-regular;
+			  	text-decoration: none;
+			  	color: $black;
+			  	opacity: 0.5;
+			  	&:hover {
+			  		opacity: 1;
+			  	}
+			}
+			.datum_btn_primary {
+				@media #{$large-mobile} {  
+					width: 100%;
+					margin-right: 0; 
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+}
+
+
+/*31-03-2021*/
+
+#datum_changepw_popup {
+	&.datum_overlay {
+  		position: fixed ;
+	  	top: 0 ;
+	  	bottom: 0 ;
+	  	left: 0 ;
+	  	right: 0 ;
+	  	background: rgba(0, 0, 0, 0.7) ;
+	  	transition: opacity 500ms ;
+	  	visibility: hidden ;
+	  	opacity: 0 ;
+	  	z-index: 10 ;
+	  	overflow: scroll ; 
+	  	&:target {
+	  		visibility: visible ;
+  			opacity: 1 ;
+	  	}
+	  	.datum_login_popupbox{
+	  		margin: 70px auto ;
+			padding: 20px ;
+			background: #fff ;
+			border-radius: 5px ;
+			width: 100% ;
+			max-width: 40% ;
+			position: relative ;
+			transition: all 5s ease-in-out ;
+			text-align: left ;
+			@media #{$tablet-device} {                  
+		    	max-width: 90% ;
+  			}
+			@media #{$large-mobile} {                  
+		    	max-width: 90% ;
+		    	margin: 15px ;
+  			}
+			h3{
+				margin-top: 0 ; 
+			  	color: $black ;
+			  	font-size: $font-size24 ;
+			  	margin-bottom: 25px ;
+			}
+			.datum_login_close{
+				position: absolute ;
+			  	top: 20px ;
+			  	right: 15px ;
+			  	transition: all 200ms ;
+			  	font-size: $font-size30 ;
+			  	font-weight: $font-regular ;
+			  	text-decoration: none ;
+			  	color: $black ;
+			  	opacity: 0.5 ;
+			  	&:hover {
+			  		opacity: 1 ;
+			  	}
+			}
+			.datum_changepw_form{
+				width: 60% ;
+				.datum_form_group{
+					.datum_pw_box{ 
+						position: relative;
+						.datum_form-control{
+							width: 100% ;
+						}
+						a{
+							img {
+								position: absolute ;
+								right: 15px ;
+								top: 15px ;
+							}
+						}
+					}
+				}
+			}
+			.datum_btn_primary {
+				@media #{$large-mobile} {  
+					width: 100% ;
+					margin-right: 0 ; 
+					margin-bottom: 15px ;
+				}
+			}
+		}
+	}
+}

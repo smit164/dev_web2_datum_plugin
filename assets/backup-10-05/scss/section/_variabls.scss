@@ -1,0 +1,112 @@
+
+
+// Font Family
+
+$default-font: 'Poppins', sans-serif;
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+// Colors ---------------
+
+$white: #ffffff;
+$black: #000000;
+
+
+// Theme Color
+$font-primary-color: #2C2C2C;
+$font-secondary-color: #666666;
+$red-color: #D22630;
+$blue-color: #000F9F; 
+
+
+
+//Color
+$grey-color: #BCBFC1;
+$linkedin-color: #0077B5;
+$coal-black: #3C3C3C;
+$light-grey-color: #E3E9EF;
+$light-blue-color: #EAF2FF;
+$dark-grey-color: #CCCCCC;
+$border-grey: #D2D2D2;
+
+// BG Colors
+
+$white-secondary: #F3F3F3;
+$right-body-color: #EFF7FF;
+
+
+//Box-Shadow
+$box-shadow-inset:  inset 0 0 6px rgba(0,0,0,.3);
+$textbox-shadow: 0 0 10px rgba(0, 0, 0, 0.10);
+$box-shadow-grey:  0px 5px 15px rgba(172, 178, 193, 1);
+
+
+// Responsive Variables
+$extraBig-device : 'only screen and (min-width: 1600px)';
+$laptop-device : 'only screen and (min-width: 1200px) and (max-width: 1600px)';
+$mini-laptop-device : 'only screen and (min-width: 1200px) and (max-width: 1300px)';
+$desktop-device : 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$mini-desktop-device : 'only screen and (min-width: 1025px) and (max-width: 1199px)';
+$large-tablet-device:'only screen and (min-width: 992px) and (max-width: 1024px)';
+$tablet-device:'only screen and (min-width: 768px) and (max-width: 991px)';
+$small-mobile3:'only screen and (min-width: 430px) and (max-width: 575px)';
+$small-tablet:'only screen and (max-width: 991px)';
+$large-mobile:'only screen and (max-width: 767px)';
+$small-mobile2: 'only screen and (max-width: 575px)';
+$small-mobile: 'only screen and (max-width: 479px)';
+$xsmall-mobile: 'only screen and (max-width: 360px)';
+
+//Fonts Size Variable 
+$font-size0:  0px;
+$font-size8:  8px;
+$font-size9:  9px;
+$font-size10: 10px;
+$font-size11: 11px;
+$font-size12: 12px;
+$font-size13: 13px;
+$font-size14: 14px;
+$font-size15: 15px;
+$font-size16: 16px;
+$font-size17: 17px;
+$font-size18: 18px;
+$font-size20: 20px;
+$font-size21: 21px;
+$font-size22: 22px;
+$font-size24: 24px;
+$font-size26: 26px;
+$font-size28: 28px;
+$font-size30: 30px;
+$font-size32: 32px;
+$font-size34: 34px;
+$font-size36: 36px;
+$font-size38: 38px;
+$font-size40: 40px;
+$font-size42: 42px;
+$font-size44: 44px;
+$font-size46: 46px; 
+$font-size48: 48px; 
+$font-size50: 50px;
+$font-size52: 52px;
+$font-size60: 60px;
+
+$font-semibold: 600; 
+$font-regular: 400; 
+$font-bold: 700; 
+$font-medium: 500; 
+$font-black: 900;
+$font-light: 300;  
+
+$border-radius8: 8px;
+$border-radius6: 6px;
+$border-radius4: 4px;
+$border-radius5: 5px;
+$border-radius10: 10px;
+$border-radius0: 0px;
+$border-radius-round: 50%;
+
+$dashed-border: dashed;
+$solid-border: solid;

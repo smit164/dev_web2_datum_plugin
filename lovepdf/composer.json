@@ -1,0 +1,10 @@
+{
+    "name": "vendor/lovepdf",
+    "description": "test",
+    "type": "project",
+    "license": "test",
+    "minimum-stability": "RC",
+    "require": {
+        "ilovepdf/ilovepdf-php": "^1.1"
+    }
+}

@@ -1,0 +1,90 @@
+.datum_position_relative{
+	#datum_feature_slider{
+		position: relative;
+		.slick-slide{
+			position: relative;
+			img {
+				width: 100%;
+				height: 473px;
+				object-fit: cover;
+			}
+		}
+		.gallary-icon {
+			position: absolute;
+			bottom: 14px;
+			right: 100px;
+			border: 2px $solid-border $white;
+    		background: $white;
+    		text-align: center;
+    		font-size: $font-size14;
+    		color: $black;
+    		@media #{$large-mobile} {                  
+    			right: 85px;
+  			}
+    		p {
+    			margin-top: 0;
+    			@media #{$large-mobile} {                  
+    				display: none;
+  				}
+    		}
+    		img{
+    			height: auto;
+    			@media #{$large-mobile} {                  
+    				height: 40px;
+  				}
+    		}
+		}
+		.slick-arrow.slick-prev {
+			left: 0;
+			background: url(../../../images/icons/left-arrowSlider.png) center center no-repeat;
+			width: 50px;
+			height: 60px;
+			font-size: $font-size0;
+			&:before {
+				display: none;
+			}
+		}
+		.slick-arrow.slick-next {
+			right: 0;
+			background: url(../../../images/icons/right-arrowSlider.png) center center no-repeat;
+			width: 50px;
+			height: 60px;
+			font-size: $font-size0;
+			&:before {
+				display: none;
+			}
+		}
+		.slick-arrow {
+			position: absolute;
+			z-index: 9;
+			top: 50%;
+			border: 0;
+		}
+	}
+	.location-icon {
+		position: absolute;
+		bottom: 67px;
+		right: 20px;
+		border: 2px $solid-border $white;
+    	background: $white;
+    	text-align: center;
+    	font-size: $font-size14;
+    	color: $black;
+    	display: grid;
+    	@media #{$large-mobile} {                  
+    		bottom: 124px;
+  		}
+    	p {
+    		margin-top: 0;
+    		@media #{$large-mobile} {                  
+    			display: none;
+  			}
+    	}
+    	img{
+    		height: auto;
+    		@media #{$large-mobile} {                  
+    			height: 40px;
+  			}
+    	}
+	}
+}

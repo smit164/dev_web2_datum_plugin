@@ -1,0 +1,446 @@
+/*  modals   */
+
+
+.datum_modal {
+    position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    z-index: 10000; /* 1 */
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  	overflow-y: auto;
+    .datum_modal_overlay {
+  		position: fixed;
+  		z-index: 10;
+  		top: 0;
+  		left: 0;
+  		width: 100%;
+  		height: 100%;
+  		background: hsla(0, 0%, 0%, 0.5);
+  		visibility: hidden;
+  		opacity: 0;
+  		transition: visibility 0s linear 0.3s, opacity 0.3s;
+  		overflow-y: auto;
+	}
+	.datum_modal_wrapper {
+	  	margin: 70px auto;
+		padding: 30px;
+		background: #fff;
+		border-radius: 5px;
+		width: 100%;
+		max-width: 600px;
+		position: relative;
+		z-index: 9999;
+		transition: all 5s ease-in-out;
+		@media #{$tablet-device} {                  
+		   	max-width: 90%;
+  		}
+		@media #{$large-mobile} {                  
+		   	max-width: 90%;
+		   	margin: 15px auto;
+  		}
+  		&.datum_modal_wrapper_signup{
+  			max-width: 80%;
+  			margin-left: auto;
+			margin-right: auto;
+		   	@media #{$desktop-device} {                  
+		   		max-width: 95%;
+  			}
+  			@media #{$tablet-device} {                  
+		   		max-width: 95%;
+  			}
+  			@media #{$large-mobile} {                  
+		   		max-width: 90%;
+  			}
+  			.modal-heading{
+  				padding: 15px 20px;
+  			}
+  			&.datum_offer_popup{
+  				max-width: 90%;
+  			}
+  			.datum_row{
+  				.datum_col_3{
+  					padding: 20px;
+  					@media #{$tablet-device} {  
+  						width: 40%;
+  						border: none;
+  					}
+  				}
+  				.datum_col_9{
+  					padding: 20px 5px;
+  					@media #{$tablet-device} {  
+  						width: 100%;
+  						border: 1px $solid-border $grey-color;
+  					}
+  				}
+  				.datum_row{
+  					.datum_col_6{
+  						@media #{$large-mobile} {                  
+		   					padding: 0;
+  						}
+  					}
+  				}
+  			}
+  			.datum_pw_box{
+  				.toggle-password-h{
+  					right: 35px;
+  				}
+  			}
+  		}
+	}
+	&.is-visible{
+		visibility: visible;
+		.datum_modal_overlay{
+			opacity: 1;
+  			visibility: visible;
+  			transition-delay: 0s;
+		}
+		.datum_modal_transition{
+			transform: translateY(0);
+ 	 		opacity: 1;
+		}
+	}
+	.datum_modal_transition {
+  		transition: all 0.3s 0.12s;
+  		transform: translateY(-10%);
+  		opacity: 0;
+	}
+}
+
+
+.datum_login_popupbox{
+	h2{
+		margin-top: 0;
+	  	color: $black;
+	  	font-size: $font-size24;
+	  	margin-bottom: 0;
+	}
+	p{
+		margin: 0;
+		font-size: $font-size16;
+		color: $font-secondary-color;
+	}
+	.datum_login_close{
+		position: absolute;
+	  	top: 25px;
+	  	right: 15px;
+	  	transition: all 200ms;
+	  	font-size: $font-size40;
+	  	font-weight: $font-regular;
+	  	text-decoration: none;
+	  	color: $blue-color;
+	  	opacity: 1;
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+	.datum_login_content {
+		.datum_form_group{
+			margin-top: 15px;
+			.datum_form-control {
+				width: 100%;
+				margin-bottom: 0px;
+				&.error{
+					border: 1px $solid-border $red-color;
+					font-size: $font-size14;
+					color: $grey-color;
+				}
+			}
+			.error{
+				font-weight: 400;
+				font-size: $font-size12;
+				color: $red-color;
+			}
+		}
+		p{
+			margin-bottom: 20px;
+			#datum_forgot_password{
+				text-decoration: underline;
+			}
+		}
+		.datum_btn_primary {
+			@media #{$large-mobile} {  
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 15px;
+			}
+		}
+		.datum_btn_grey {
+			@media #{$large-mobile} {  
+				width: 100%;
+				margin-right: 0;
+				text-align: center;
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+
+
+.datum_modal_advance_search{
+	.datum_modal_wrapper{
+		padding: 0;
+		.modal-heading {
+    		padding: 15px;
+		}
+		.datum_login_content {
+			border-top: 1px solid #CCC;
+			.datum_col_3 {
+				padding: 20px 15px;
+				border-right: 1px solid #CCC;
+				.datum_checkbox-accordian {
+    				padding: 0;
+    				min-width: 100%;
+    				border: none;
+    				.datum_accordian-card{
+    					margin: 0;
+    				}
+				}
+			}
+			.datum_col_9 {
+				padding: 20px 0px;
+				.datum_form-control{
+					width: 100%;
+					padding: 0 8px;
+				}
+			}
+		}
+	}
+}
+
+
+.asking-price-group { display: flex;  width: 100%; align-items: baseline; }
+.asking-price-group span { margin: 0 5px; }
+
+
+#datum_signup_popup {
+	&.datum_overlay {
+  		position: fixed;
+	  	top: 0;
+	  	bottom: 0;
+	  	left: 0;
+	  	right: 0;
+	  	background: rgba(0, 0, 0, 0.7);
+	  	transition: opacity 500ms;
+	  	visibility: hidden;
+	  	opacity: 0;
+	  	z-index: 9;
+	  	overflow: scroll; 
+	  	&:target {
+	  		visibility: visible;
+  			opacity: 1;
+	  	}
+	  	.datum_login_popupbox{
+	  		margin: 70px auto;
+			padding: 20px;
+			background: #fff;
+			border-radius: 5px;
+			width: 100%;
+			max-width: 80%;
+			position: relative;
+			transition: all 5s ease-in-out;
+			@media #{$tablet-device} {                  
+		    	max-width: 90%;
+  			}
+			@media #{$large-mobile} {                  
+		    	max-width: 90%;
+		    	margin: 15px;
+  			}
+			h2{
+				margin-top: 0;
+			  	color: $black;
+			  	font-size: $font-size24;
+			  	margin-bottom: 0;
+			}
+			p{
+				margin: 0;
+				font-size: $font-size16;
+				color: $font-secondary-color;
+			}
+			.datum_login_close{
+				position: absolute;
+			  	top: 25px;
+			  	right: 15px;
+			  	transition: all 200ms;
+			  	font-size: $font-size40;
+			  	font-weight: $font-regular;
+			  	text-decoration: none;
+			  	color: $blue-color;
+			  	opacity: 1;
+			  	&:hover {
+			  		opacity: 0.5;
+			  	}
+			}
+			.datum_btn_primary {
+				@media #{$large-mobile} {  
+					width: 100%;
+					margin-right: 0;
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+}
+
+#datum_thankyou_popup {
+	&.datum_overlay {
+  		position: fixed;
+	  	top: 0;
+	  	bottom: 0;
+	  	left: 0;
+	  	right: 0;
+	  	background: rgba(0, 0, 0, 0.7);
+	  	transition: opacity 500ms;
+	  	visibility: hidden;
+	  	opacity: 0;
+	  	z-index: 9;
+	  	overflow: scroll; 
+	  	&:target {
+	  		visibility: visible;
+  			opacity: 1;
+	  	}
+	  	.datum_login_popupbox{
+	  		margin: 70px auto;
+			padding: 70px 20px;
+			background: #fff;
+			border-radius: 5px;
+			width: 100%;
+			max-width: 40%;
+			position: relative;
+			transition: all 5s ease-in-out;
+			text-align: center;
+			@media #{$tablet-device} {                  
+		    	max-width: 90%;
+  			}
+			@media #{$large-mobile} {                  
+		    	max-width: 90%;
+		    	margin: 15px;
+  			}
+			h3{
+				margin-top: 0; 
+			  	color: $black;
+			  	font-size: $font-size24;
+			  	margin-bottom: 25px;
+			}
+			.datum_verification_img{
+				width: 80px;
+				margin-bottom: 25px;
+			}
+			.datum_login_close{
+				position: absolute;
+			  	top: 25px;
+			  	right: 15px;
+			  	transition: all 200ms;
+			  	font-size: $font-size40;
+			  	font-weight: $font-regular;
+			  	text-decoration: none;
+			  	color: $blue-color;
+			  	opacity: 1;
+			  	&:hover {
+			  		opacity: 0.5;
+			  	}
+			}
+			.datum_btn_primary {
+				@media #{$large-mobile} {  
+					width: 100%;
+					margin-right: 0; 
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+}
+
+
+/*31-03-2021*/
+
+#datum_changepw_popup {
+	&.datum_overlay {
+  		position: fixed ;
+	  	top: 0 ;
+	  	bottom: 0 ;
+	  	left: 0 ;
+	  	right: 0 ;
+	  	background: rgba(0, 0, 0, 0.7) ;
+	  	transition: opacity 500ms ;
+	  	visibility: hidden ;
+	  	opacity: 0 ;
+	  	z-index: 10 ;
+	  	overflow: scroll ; 
+	  	&:target {
+	  		visibility: visible ;
+  			opacity: 1 ;
+	  	}
+	  	.datum_login_popupbox{
+	  		margin: 70px auto ;
+			padding: 20px ;
+			background: #fff ;
+			border-radius: 5px ;
+			width: 100% ;
+			max-width: 40% ;
+			position: relative ;
+			transition: all 5s ease-in-out ;
+			text-align: left ;
+			@media #{$tablet-device} {                  
+		    	max-width: 90% ;
+  			}
+			@media #{$large-mobile} {                  
+		    	max-width: 90% ;
+		    	margin: 15px ;
+  			}
+			h3{
+				margin-top: 0 ; 
+			  	color: $black ;
+			  	font-size: $font-size24 ;
+			  	margin-bottom: 25px ;
+			}
+			.datum_login_close{
+				position: absolute ;
+			  	top: 25px ;
+			  	right: 15px ;
+			  	transition: all 200ms ;
+			  	font-size: $font-size40 ;
+			  	font-weight: $font-regular ;
+			  	text-decoration: none ;
+			  	color: $blue-color;
+			  	opacity: 1;
+			  	&:hover {
+			  		opacity: 0.5;
+			  	}
+			}
+			.datum_changepw_form{
+				width: 60% ;
+				.datum_form_group{
+					.datum_pw_box{ 
+						position: relative;
+						.datum_form-control{
+							width: 100% ;
+						}
+						a{
+							img {
+								position: absolute ;
+								right: 15px ;
+								top: 15px ;
+							}
+						}
+					}
+				}
+			}
+			.datum_btn_primary {
+				@media #{$large-mobile} {  
+					width: 100% ;
+					margin-right: 0 ; 
+					margin-bottom: 15px ;
+				}
+			}
+		}
+	}
+}
+
+.datum_opened_modal {
+    overflow: hidden;
+}

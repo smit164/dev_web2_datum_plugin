@@ -1,0 +1,63 @@
+.datum_banner_section {
+	position: relative;
+	.datum_banner_image {
+		picture{
+			img {
+				width: 100%;
+				height: 500px;
+				object-fit: cover;
+				@media #{$large-mobile} {                  
+					height: 320px;
+				}
+			}
+		}
+		.datum_gradient_below_text {
+			background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.08727240896358546) 12%, rgba(0,0,0,0.7) 62%, rgba(0,0,0,0.9) 100%);
+			width: 100%;
+			height: 256px;
+			position: absolute;
+			bottom: 0;
+			.datum_banner_text {
+				position: absolute;
+				left: 30px;
+				bottom: 20px;
+				color: $white;
+				@media #{$large-mobile} {                  
+					left: 15px;
+				}
+				img{
+					@media #{$large-mobile} {
+						width: 30px;
+						height: auto !important;
+					}
+				}
+				h1{
+					position: relative;
+					font-size: $font-size30;
+					color: $white;
+					font-family: 'baskervilleroman';
+					margin-bottom: 30px;
+					@media #{$large-mobile} {                  
+						font-size: $font-size20;
+					}
+					span {
+						display: block;
+						color: $white;
+						font-size: $font-size22;
+						letter-spacing: 0;
+						text-transform: none;
+						line-height: 1.2;
+						font-family: $default-font;
+						font-weight: $font-regular;
+						@media #{$large-mobile} {                  
+							font-size: $font-size16;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+

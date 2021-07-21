@@ -1,0 +1,108 @@
+.datum_pdp_details_mainbox {
+	display: flex;
+	justify-content: space-evenly;
+	background: $blue-color;
+	padding: 0;
+	align-items: center;
+	ul{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		width: 100%;
+		li{
+			display: inline-block;
+			width: 16.6%;
+			margin: 18px 0;
+			@media #{$tablet-device} {                  
+				width: 33.33% !important;
+			}
+		}
+	}
+}
+
+.datum_details_strap_slider {
+	background: $blue-color;
+	padding: 18px;
+	.slick-prev{
+		background: url(../images/icons/left-arrow.png) center center no-repeat;
+		left: 0;
+		background-size: 60px;
+		width: 40px;
+		height: 40px;
+		z-index: 9;
+		&:before{
+			display: none;
+		}
+
+	}
+	.slick-next{
+		background: url(../images/icons/right-arrow.png) center center no-repeat;
+		right: 0px;
+		background-size: 60px;
+		width: 40px;
+		height: 40px;
+		z-index: 9;
+		&:before{
+			display: none;
+		}
+
+	}
+}
+.datum_pdp_detail_box {
+		text-align: center;
+		color: $black;
+		background: $white;
+		margin: 0 18px;
+		padding: 15px;
+		transition: all 0.5s;
+		@media #{$large-mobile} { 
+			padding: 8px;                 
+			margin: 0 5px;
+		}
+		p {
+			margin: 0;
+			color: $font-secondary-color;
+			text-transform: uppercase;
+			font-size: $font-size15;
+			@media #{$large-mobile} {                  
+            	font-size: $font-size12;
+        	}
+		}
+		img {
+			height: 35px;
+			margin: 0 auto;
+			@media #{$large-mobile} {  
+				height: 20px;                
+				margin-bottom: 5px;
+			}
+		}
+		h3 {
+			font-size: $font-size20;
+			margin: 10px 0px 6px;
+			font-weight: $font-semibold;
+			line-height: 31px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			@media #{$large-mobile} {                  
+				font-size: $font-size14;
+				line-height: 14px;
+				margin: 10px 0px 0px 0px;
+			}
+		}
+		&:hover {
+			z-index: 2;
+			-webkit-transition: all 300ms ease-in;
+			-webkit-transform: scale(1.13);
+			-ms-transition: all 200ms ease-in;
+			-ms-transform: scale(1.13);
+			-moz-transition: all 300ms ease-in;
+			-moz-transform: scale(1.13);
+			transition: all 300ms ease-in;
+			transform: scale(1.13);
+			@media #{$large-mobile} {                  
+				transform: none;
+			}
+		}
+	}
+

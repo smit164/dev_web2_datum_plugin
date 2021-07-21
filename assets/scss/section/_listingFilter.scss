@@ -1,0 +1,208 @@
+.datum_filter_row {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 25px 0;
+	border-bottom: 1px $solid-border $dark-grey-color;
+	@media #{$mini-laptop-device} {                  
+		display: block;
+	}
+	@media #{$desktop-device} {                  
+		display: block;
+	}
+	@media #{$tablet-device} {                  
+		display: block;
+	}
+	@media #{$large-mobile} {                  
+		display: block;
+	}
+	.datum_filter_leftcontent{
+		display: flex;
+		align-items: flex-start;
+		justify-content: left;
+		width: 100%;
+		@media #{$desktop-device} {                  
+			margin-bottom: 15px;
+		}
+		@media #{$tablet-device} {                  
+			display: block;
+		}
+		@media #{$large-mobile} {                  
+			display: block;
+		}
+		.datum_select_box{
+			cursor: pointer;
+			@media #{$tablet-device} {                  
+				display: inline-block;
+				margin-bottom: 15px;
+			}
+			&#datum_drop-down-property-status{
+				margin-right: 15px;
+				.select2-container--default{
+					.select2-selection--multiple{
+						border: 1px $solid-border $black;
+						background-color: $white;
+						input.select2-search__field::placeholder {
+						    color: $black !important;
+						}
+						input.select2-search__field{
+							margin-top: 6.5px;
+							cursor: pointer;
+						}
+						.select2-selection__choice { 
+							margin-left: 5px;
+							padding: 0 2px;
+						}
+					}
+				}
+			}
+			.datum_form-control{
+				padding: 0 35px 0 8px;
+				margin-bottom: 0;
+				border: 1px $solid-border $black;
+				font-size: $font-size14;
+				font-weight: $font-regular;
+				color: $black;
+				background: url(../images/icons/select-arrow.svg) no-repeat 92% center;
+				min-width: 180px;
+				margin-right: 15px;
+				background-color: $white;
+				max-width: 180px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				cursor: pointer;
+				white-space: nowrap;
+				@media #{$large-mobile} {                  
+					width: 100%;
+					margin-bottom: 15px;
+					margin-right: 0;
+					max-width: 100%;
+				}
+			}
+			.datum_drop-down_menubox{
+				width: 130%;
+				margin: 0;
+				border: 1px solid #cfcfd8;
+				@media #{$large-mobile} {                  
+					width: 100%;
+				}
+				.datum_text-box-custome{
+					li{
+						padding: 7px 10px;
+						font-size: 16px;
+						cursor: pointer;
+						&:hover{
+							background-color: #e0e0e6;
+						}
+						.datum_text-box-card-header{
+							.datum-asking-min{
+								input{
+									max-width: 100%;
+									margin-bottom: 8px;
+									background: none;
+									padding: 0 8px;
+								}
+							}
+							.datum-asking-max{
+								input{
+									max-width: 100%;
+									background: none;
+									padding: 0 8px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.datum_btn_secondary{
+			@media #{$tablet-device} {                  
+				display: inline-block;
+				margin-bottom: 15px;
+			}
+			@media #{$large-mobile} {                  
+				width: 100%;
+				margin-bottom: 15px;
+				margin-right: 0;
+			}
+		}
+		.datum_filter_clear{
+			@media #{$large-mobile} {                  
+				display: table;
+				margin: 0 auto;
+				margin-bottom: 15px;
+			}
+		}
+	}
+	.datum_filter_rightcontent{
+		display: flex;
+		align-items: center;
+		justify-content: right;
+		@media #{$mini-laptop-device} {                  
+			justify-content: left;
+			margin-top: 15px;
+		}
+		@media #{$desktop-device} {                  
+			justify-content: left;
+		}
+		@media #{$tablet-device} {                  
+			justify-content: left;
+		}
+		@media #{$large-mobile} {                  
+			display: inline-block;
+		}
+		.datum_listing_type {
+			align-items: center;
+			width: auto;
+			border: 1px $solid-border $black;
+			display: flex;
+			margin-right: 10px;
+			border-radius: $border-radius4;
+			@media #{$large-mobile} {                  
+				display: inline-block;
+			}
+			#property_sorting {
+			    margin-bottom: 0;
+			    line-height: 39px;
+			    height: 39px;
+			    padding: 0 35px 0 8px;
+			    border: 0;
+			    color: #000;
+			    text-transform: capitalize;
+			    font-size: $font-size14;
+			    background: url(../images/icons/select-arrow.svg) no-repeat 92% center;
+			    background-color: $white;
+			    min-width: 125px;
+			    cursor: pointer;
+			}
+			.datum_custom_select {
+				display: inline-block;
+				width: 100%;
+				height: calc(1.5em + 0.75rem + 2px);
+				padding:0rem 1.75rem 0rem 0.2rem;
+				color: #495057;
+				vertical-align: middle;
+				background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
+				background-color: #fff;
+				border: 1px solid #ced4da;
+				border-radius: $border-radius4;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				.datum_form_select{
+					border:0px;
+					background: transparent;
+					width: auto;
+					font-size: 14px;
+					font-weight: 600;
+					height: 35px;
+					option{
+						font-size: 14px;
+						font-weight: 400;
+						padding: 5px;
+					}
+				}
+			}
+		}
+	}
+}

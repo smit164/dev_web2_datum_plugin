@@ -1,0 +1,113 @@
+.datum_accordion-new{
+  margin-top: 30px;
+  .datum_accordion_entries{
+    .datum_accordion_entry {
+      /* border-bottom: 1px $solid-border $border-grey; */
+      .datum_accordion_entry_title {
+        position: relative;
+        .datum_accordion_entry_header_link {
+          display: block;
+          padding: 0;
+          color: $black;
+          font-size: $font-size16;
+          font-weight: $font-regular;
+          margin-bottom: 15px;
+        }
+        .datum_accordion_entry_header_icon_wrapper {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          display: block;
+          transform: translate(0,-50%);
+          transition: all .4s;
+          .datum_accordion_entry_header_icon {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.datum_accordion_entry{
+    &:last-of-type {
+        .datum_accordion_entry_body{
+            margin-bottom: 0px;
+        }        
+    }
+}
+
+.datum_accordion_entry_body {
+  display: none;
+  margin-bottom: 20px;
+  .datum_accordion_entry_content{
+    &.pdp-offeringSummary{
+        height: unset;
+        .datum_collapse_data{
+            padding:  0;
+            margin-top: 0;
+        }
+    }
+    &.pdp-description{
+        height: unset;
+    }
+  }
+}
+
+
+// This needs to be so specific because then we can nest accordions
+.datum_accordion_entry.is-expanded > .datum_accordion_entry_title > .datum_accordion_entry_header_link > .datum_accordion_entry_header_icon_wrapper {
+  transform: translate(0,-50%) rotate(180deg); }
+
+
+
+
+.datum_checkbox-accordian {
+    position: relative; 
+    padding: 5px;
+    min-width: 270px;
+    border: 1px solid #b1b1b1;
+    border-radius: 5px;
+    background: $white;
+    z-index: 999;
+    .datum_accordian-card {
+        border: none;
+        border-bottom: 1px solid #CCC;
+        margin: 0 8px;
+        border-radius: 0;
+        &:last-child {
+            border-bottom: 0px;
+        }
+        .datum_accordian-card-header {
+            padding: 3px 0;
+            background-color: transparent !important;
+            border-radius: 0 !important;
+            border: 0 !important;
+            position: relative;
+            &.active {
+                span {
+                    transform: rotate(45deg);
+                }
+            }
+            span {
+                position: absolute;
+                right: 0;
+                top: 9px;
+                color: #2c2c2c;
+                transition: all 0.3s ease-in-out;
+                font-size: 20px;
+                cursor: pointer;
+            }
+            .datum_custom_checkbox {
+                margin-bottom: 0;
+                margin-top: 5px ;
+            }
+        }
+        .datum_accordian-card-body {
+            padding: 0 1rem 1rem 1rem;
+            .datum_custom_checkbox {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,162 @@
+.datum_banner_section {
+	position: relative;
+	.datum_banner_image {
+		picture{
+			img {
+				width: 100%;
+				height: 100vh;
+				object-fit: cover;
+				display: block;
+				@media #{$large-mobile} {                  
+					height: 320px;
+				}
+			}
+		}
+		.datum_gradient_below_text {
+			background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.08727240896358546) 12%, rgba(0,0,0,0.7) 62%, rgba(0,0,0,0.9) 100%);
+			width: 100%;
+			height: 256px;
+			position: absolute;
+			bottom: 0;
+			.datum_banner_text {
+				position: absolute;
+				left: 30px;
+				bottom: 20px;
+				color: $white;
+				@media #{$large-mobile} {                  
+					left: 15px;
+				}
+				img{
+					@media #{$large-mobile} {
+						width: 30px;
+						height: auto !important;
+					}
+				}
+				h1{
+					position: relative;
+					font-size: $font-size48;
+					color: $white;
+					margin-bottom: 30px;
+					@media #{$large-mobile} {                  
+						font-size: $font-size20;
+					}
+					span {
+						display: block;
+						color: $white;
+						font-size: $font-size22;
+						letter-spacing: 0;
+						text-transform: none;
+						line-height: 1.2;
+						font-family: $default-font;
+						font-weight: $font-regular;
+						@media #{$large-mobile} {                  
+							font-size: $font-size16;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+.datum_agent_banner {
+	height: 500px;
+	position: relative;
+	@media #{$extraBig-device} {                  
+		height: 650px;
+	}
+	@media #{$tablet-device} {                  
+		height: 320px;
+	}
+	@media #{$large-mobile} {                  
+		height: 350px;
+	}
+	.datum_banner_image {
+		height: 100%;
+		@media #{$tablet-device} {                  
+			height: 100%;
+		}
+		@media #{$large-mobile} {                  
+			height: 100%;
+		}
+		.datum_agent_banner_bg{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.datum_agent_mainContent {
+			display: flex;
+			position: absolute;
+			left: 30px;
+			bottom: 0;
+			align-items: center;
+			@media #{$tablet-device} {                  
+				align-items: flex-end;
+			}
+			@media #{$large-mobile} {                  
+				left: 0;
+				align-items: flex-end;
+			}
+			.datum_agentpic {
+				width: 400px;
+				@media #{$tablet-device} {                  
+					height: auto !important;
+					width: 220px;
+				}
+				@media #{$large-mobile} {                  
+					height: auto !important;
+					width: 150px;
+				}
+			}
+			img {
+				height: auto;
+				max-width: 100%;
+				width: auto;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.agent_detail{
+				color: $white;
+				padding-left: 50px;
+				@media #{$tablet-device} {                  
+					padding-bottom: 10px;
+				}
+				@media #{$large-mobile} {                  
+					padding-left: 0;
+					padding-bottom: 10px;
+				}
+				h4{
+					font-size: $font-size36;
+					margin-bottom: 10px;
+					@media #{$large-mobile} {                  
+						font-size: 20px;
+						margin-bottom: 0;
+					}
+				}
+				p{
+					margin: 0 0 10px;
+					@media #{$large-mobile} {                  
+						font-size: 14px;
+						line-height: 20px;
+					}
+					&.profile_title{
+						margin-bottom: 15px;
+					}
+				}
+				a{
+					color: $white;
+					font-size: $font-size17;
+					text-decoration: none;
+					@media #{$large-mobile} {                  
+						font-size: 14px;
+						line-height: 20px;
+					}
+				}
+			}
+		}
+
+	}
+}
+
+

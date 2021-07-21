@@ -1,0 +1,41 @@
+.datum_accordion{
+  margin-top: 30px;
+  .datum_accordion_entries{
+    .datum_accordion_entry {
+      border-bottom: 1px $solid-border $border-grey;
+      .datum_accordion_entry_title {
+        position: relative;
+        .datum_accordion_entry_header_link {
+          display: block;
+          padding: 10px 45px 10px 0;
+          color: $black;
+          font-size: $font-size16;
+          font-weight: $font-regular;
+          cursor: pointer;
+        }
+        .datum_accordion_entry_header_icon_wrapper {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          display: block;
+          transform: translate(0,-50%);
+          transition: all .4s;
+          .datum_accordion_entry_header_icon {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.datum_accordion_entry_body {
+  display: none;
+}
+
+
+// This needs to be so specific because then we can nest accordions
+.datum_accordion_entry.is-expanded > .datum_accordion_entry_title > .datum_accordion_entry_header_link > .datum_accordion_entry_header_icon_wrapper {
+  transform: translate(0,-50%) rotate(180deg);
+}

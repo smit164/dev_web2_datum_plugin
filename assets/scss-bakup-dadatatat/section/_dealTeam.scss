@@ -1,0 +1,109 @@
+.datum_deal_team_section {
+	display: flex;
+	flex-wrap: wrap;
+	.datum_deskdevice_6{
+		@media #{$tablet-device} {                  
+	        -ms-flex: 0 0 50%;
+	        flex: 0 0 50%;
+	        max-width: 50%;
+	        padding-right: 15px !important;
+	    }
+	}
+	.datum_teamMember_box {
+		display: flex;
+		align-items: center;
+		border-bottom: 2px $solid-border $blue-color;
+		margin-top: 20px;
+		@media #{$desktop-device} {                  
+    		display: block;
+  		}
+		@media #{$large-mobile} {                  
+    		display: block;
+    		box-shadow: none;
+    		border-bottom: 0px $solid-border $blue-color;
+  		}
+		a{
+			width: 40%;
+			@media #{$desktop-device} {                  
+    			width: 100%;
+  			}
+			@media #{$large-mobile} {                  
+	    		width: 100%;
+	    		display: inline-block;
+  			}
+  			img{
+  				display: block;
+  				width: 120px;
+    			height: 141px;
+    			object-fit: cover;
+  				@media #{$large-mobile} {                  
+		    		margin: 0 auto;
+		    		display: table;
+  				}
+  			}
+		}
+		.datum_team_content {
+			padding-left: 5px;
+			line-height: 20px;
+			width: 60%;
+			@media #{$desktop-device} {                  
+    			width: 100%;
+    			margin: 5px 0; 
+  			}
+			@media #{$large-mobile} {                  
+	    		width: 100%;
+	    		display: table;
+	    		margin: 0 auto;
+	    		text-align: center;
+	    		border-top: 2px $solid-border $blue-color;
+				margin-top: -7px;
+				padding-top: 15px;
+  			}
+			h4 {
+				margin: 0;
+				line-height: 15px;
+				a {
+					color: $black;
+					text-transform: uppercase;
+					font-size: $font-size16;
+					margin-bottom: 0;
+					&:hover {
+						color: $blue-color;
+					}
+				}
+			}
+			p {
+				margin: 0;
+				color: $black;
+				font-size: $font-size14;
+				white-space: nowrap;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    width: 170px;
+			    @media #{$large-mobile} {                  
+		    		white-space: unset;
+		    		width: auto;
+		    		word-break: break-all;
+  				}
+				a {
+					color: $black;
+					font-weight: $font-medium;
+				}
+				&.datum_agent_designation{
+					margin-bottom: 8px;
+				}
+			}
+			.small-text{
+				p{
+					color: $black;
+					font-size: $font-size14;
+					line-height: 14px;
+				}
+				a{
+					color: $black;
+					font-size: $font-size14;
+				}
+			}
+		}
+	}
+}

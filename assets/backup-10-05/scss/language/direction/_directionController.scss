@@ -1,0 +1,187 @@
+// Name: Direction Controller Functions
+// URI: https://github.com/parhumm/Sass-Direction-Controller/
+// Description: An approach to write a css code for once and create tow version of it RTL or LTR just with change one variable value
+// Version: 1.0.2
+// Author: Parhum Khoshbakht
+// Author URI: https://github.com/parhumm
+// License: The MIT License (MIT)
+// License URI: https://github.com/parhumm/Sass-Direction-Controller/blob/master/LICENSE
+
+
+// Choose Your Site Language Direction: LTR or RTL.
+// Default is LTR
+$text-direction:		ltr		!default;
+
+// Write your base sass for RTL or LTR.
+// Default is for LTR
+$default-float-none:	none	!default;
+$default-float:			left	!default;
+$opposite-direction:	right	!default;
+
+$start: $default-float;
+$end: $opposite-direction;
+
+// Default Positioning LTR
+$position-left:			0	    !default;
+$position-leftRight:    auto	!default;
+$position-right:	    0	    !default;
+$position-rightLeft:    auto	!default;
+
+$left: $default-float;
+$right: $opposite-direction;
+$floatNone: $default-float-none;
+
+
+// Mixin and Functions
+@if $text-direction != ltr {
+	$start: $opposite-direction;
+	$end: $default-float;
+}
+
+@if $text-direction != ltr {
+	$left: $opposite-direction;
+	$right: $default-float;
+	$floatNone: $opposite-direction;
+
+}
+
+@if $text-direction != ltr {
+	$position-left: $position-leftRight;
+	$position-right: $position-rightLeft;
+}
+
+/*
+ *  dir-check function check if direction equal ltr return first parametr, else return secound parameter
+ *  USAGE - dir-check(a,b); 
+ */
+@function dir-check($a, $b) {
+	@if $text-direction == ltr {
+		@return $a;
+	} @else {
+		@return $b;
+	}
+}
+
+
+/*
+ *  dir-values Reorder $opposite-direction and $default-float positions in padding/margin values list
+ *  USAGE - margin:dir-values(1px 2px 3px 4px); or padding:dir-values(1px 2px 3px 4px); 
+ */
+@function dir-values($values) {
+	@if $text-direction == rtl and length($values) == 4 {
+		@return nth($values, 1) nth($values, 4) nth($values, 3) nth($values, 2);
+	}
+	@else {
+		@return $values; 
+	}
+}
+
+
+/*
+ *  br-values Reorder $opposite-direction and $default-float positions in border-radius values list
+ *  USAGE - border-radius: br-values(10px 5px 5px 10px); 
+ */
+@function br-values($values) {
+	@if $text-direction == rtl and length($values) == 4 {
+		@return nth($values, 2) nth($values, 1) nth($values, 4) nth($values, 3);
+	}
+	@else {
+		@return $values;
+	}
+}
+
+
+/*
+ *  These Mixins check your direction and display @content
+ *  USAGE - @include if-rtl{} or @include if-ltr{}
+ */
+@mixin if-ltr { 
+	@if $text-direction == ltr {
+		@content;
+	}
+}
+
+@mixin if-rtl {
+	@if $text-direction != ltr {
+		@content;
+	}
+}
+
+
+/*
+ *  Text align
+ *  @include text-align(left); or @include text-align(right);
+ */
+@mixin text-align($origin: left) {
+  @if $origin == left {
+    @if $text-direction == rtl { text-align: right; }
+    @else    { text-align: left; }
+  } @else {
+    @if $text-direction == rtl { text-align: left; }
+    @else    { text-align: right; }
+  }
+}
+
+
+/*
+ *  Left/right positioning 
+ *  USAGE: @include left(8px); or @include right(8px);
+ */
+@mixin position-h($value, $origin: left) {
+  @if $origin == left {
+    @if $text-direction == rtl { right: $value; }
+    @else    { left:  $value; }
+  } @else {
+    @if $text-direction == rtl { left:  $value; }
+    @else    { right: $value; }
+  }
+}
+// Shorthands
+@mixin left($value) {
+  @include position-h($value, left);
+}
+@mixin right($value) {
+  @include position-h($value, right);
+}
+
+
+/*
+ *  Margin/Padding Shorthands
+ *  USAGE: @include margin-left(8px); or @include margin-right(8px); or  @include padding-left(8px); or  @include padding-right(8px);
+ */
+
+@mixin marginlr($value, $origin: left) {
+  @if $origin == left {
+    @if $text-direction == rtl { margin-right: $value; }
+    @else    { margin-left:  $value; }
+  } @else {
+    @if $text-direction == rtl { margin-left:  $value; }
+    @else    { margin-right: $value; }
+  }
+}
+
+@mixin margin-left($value) {
+  @include marginlr($value, left);
+}
+@mixin margin-right($value) {
+  @include marginlr($value, right);
+}
+
+
+@mixin paddinglr($value, $origin: left) {
+  @if $origin == left {
+    @if $text-direction == rtl { padding-right: $value; }
+    @else    { padding-left:  $value; }
+  } @else {
+    @if $text-direction == rtl { padding-left:  $value; }
+    @else    { padding-right: $value; }
+  }
+}
+
+@mixin padding-left($value) {
+  @include paddinglr($value, left);
+}
+@mixin padding-right($value) {
+  @include paddinglr($value, right);
+}
+

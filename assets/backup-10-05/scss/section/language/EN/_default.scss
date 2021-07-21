@@ -1,0 +1,13 @@
+/*
+ *  English
+ */
+
+/* Define direction */ 
+$text-direction: ltr ;
+
+/* Direction Controller */
+@import "../direction/directionController";
+
+@import "../direction/constants";
+
+@import "../../style";

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.69" height="22.087" viewBox="0 0 16.69 22.087">
+  <g id="padlock_1_" data-name="padlock (1)" transform="translate(0.25 0.25)">
+    <g id="Group_346" data-name="Group 346">
+      <path id="Path_11467" data-name="Path 11467" d="M84.407,8.1h-.675V6.746a6.746,6.746,0,0,0-13.492,0V8.1h-.675a.674.674,0,0,0-.675.675V20.912a.674.674,0,0,0,.675.675H84.407a.674.674,0,0,0,.675-.675V8.77A.674.674,0,0,0,84.407,8.1ZM71.589,6.746a5.4,5.4,0,1,1,10.794,0V8.1H71.589ZM83.732,20.238H70.24V9.444H83.732Z" transform="translate(-68.891 0)" stroke="#000" stroke-width="0.5"/>
+      <path id="Path_11468" data-name="Path 11468" d="M241.8,312.542v2.953h1.371v-2.953a1.351,1.351,0,0,0,.686-1.161,1.371,1.371,0,1,0-2.742,0A1.351,1.351,0,0,0,241.8,312.542Z" transform="translate(-234.395 -297.486)" stroke="#000" stroke-width="0.5"/>
+    </g>
+  </g>
+</svg>

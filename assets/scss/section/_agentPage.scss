@@ -1,0 +1,162 @@
+a.datum_view_allLink{
+	display: flex;
+	justify-content: flex-end;
+	color: $blue-color;
+	font-weight: $font-semibold;
+	margin-top: 6px;
+	text-decoration: none;
+	font-size: $font-size13;
+}
+
+.datum_agent_aboutUs {
+	margin-bottom: 50px;
+	.datum_col_8{
+		@media #{$large-mobile} {                  
+			padding-left: 0;
+		}
+	}
+	.datum_col_4{
+		@media #{$large-mobile} {                  
+			padding-left: 0;
+		}
+	}
+	.datum_agent_content {
+		height: 316px;
+		overflow: auto;
+		padding-right: 20px;
+		@media #{$large-mobile} {                  
+			height: 100%;
+			padding-right: 0;
+		}
+		&::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+			border-radius: 10px;
+			background-color: #F5F5F5;
+		}
+		&::-webkit-scrollbar {
+			width: 7px;
+			background-color: #F5F5F5;
+		}
+		&::-webkit-scrollbar-thumb {
+			border-radius: 10px;
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+			background-color: #000F9F;
+		}
+		p {
+			margin-bottom: 0.5rem;
+		}
+	}
+	.datum_published_insights {
+		border: 1px $solid-border $grey-color;
+		@media #{$large-mobile} {                  
+			margin-top: 10px;
+		}
+		h4 {
+			color: $black;
+			font-size: $font-size16;
+			font-weight: $font-bold;
+			line-height: 40px;
+			background-color: $white-secondary;
+			padding-left: 15px;
+		}
+		.datum_insights-box {
+			margin: 15px;
+			border-bottom: 1px $solid-border $grey-color; 
+			padding-bottom: 15px;
+			display: flex;
+			&:last-child{
+				padding-bottom: 0;
+				border-bottom:none;
+			}
+			.datum_insightbox-img{
+				margin-right: 12px;
+				img{
+					width: 130px;
+				}
+			}
+			.datum_insightbox-content{
+				p{
+					color: $black;
+					font-size: $font-size14;
+					line-height: 20px;
+					margin-bottom: 5px;
+					margin-top: 0;
+				}
+				.blog-type{
+					span{
+						background-color: $blue-color;
+						color: $white;
+						padding: 2px 10px;
+						display: inline-block;
+	    				letter-spacing: 0;
+	    				text-transform: none;
+	    				font-weight: $font-regular;
+	    				border-radius: 5px;
+	    				font-size: $font-size14;
+					}
+				}
+			}
+		}
+	}
+}
+
+.datum_closed_listings-slider {
+	margin-top: 20px;
+	justify-content: center;
+	.datum_item.datum_col_4{
+		@media #{$desktop-device} {                  
+			width: 100% !important;
+		}
+		@media #{$tablet-device} {                  
+			width: 100% !important;
+		}
+	}
+	.slick-prev{
+		position: absolute;
+		top: 45%;
+		bottom: 0;
+		margin-top: -22px;
+		left: 8px;
+		z-index: 9;
+		font-size: $font-size0;
+		border: none;
+		background: none;
+		@media #{$large-mobile} {                  
+			left: 0;
+		}
+		&:before {
+			content: url(../../../images/icons/prev-arrow.svg);
+			background: rgba(0,0,0,0.8);
+			padding: 8px;
+			left: 0;
+			position: absolute;
+			top: 23px;
+			display: block;
+		}
+	}
+	.slick-next{
+		position: absolute;
+		top: 45%;
+		bottom: 0;
+		right: 8px;
+		z-index: 9;
+		margin-top: -22px;
+		font-size: $font-size0;
+		border: none;
+		background: none;
+		@media #{$large-mobile} {                  
+			right: 0;
+		}
+		&:before {
+			content: url(../../../images/icons/next-arrow.svg);
+			background: rgba(0,0,0,0.8);
+			padding: 8px;
+			right: 0;
+			position: absolute;
+			top: 23px;
+			display: block;
+		}
+	}
+}
+
+

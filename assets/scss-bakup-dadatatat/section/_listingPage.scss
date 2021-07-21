@@ -1,0 +1,146 @@
+.datum_pl_flipdiv {
+	display: flex;
+	.datum_filtered_listing {
+		width: 100%;
+		.datum_item{
+			padding: 0px 8px;
+			float: left;
+			@media #{$mini-desktop-device} {                  
+				width: 33.33% !important;
+			}
+			@media #{$large-tablet-device} {                  
+				width: 33.33% !important;
+			}
+			@media #{$tablet-device} {                  
+				width: 50% !important;
+			}
+			@media #{$large-mobile} {                  
+				width: 100% !important;
+				padding: 0;
+			}
+			.datum_property_listing{
+				box-shadow: $box-shadow-grey;
+				border-radius: $border-radius6;
+				margin-bottom: 25px;
+				.datum_img-box {
+					.datum_slick_carousel{
+						img{
+							border-radius: $border-radius6 $border-radius6 $border-radius0 $border-radius0;
+							width: 100%;
+							height: 200px;
+							object-fit: cover;
+						}
+						.slick-prev{
+							position: absolute;
+							top: 50%;
+							bottom: 0;
+							margin-top: -20px;
+							left: 0;
+							z-index: 9;
+							font-size: $font-size0;
+							border: none;
+							background: none;
+							&:before {
+								content: url(../images/icons/prev-arrow.svg);
+								background: rgba(0,0,0,0.8);
+								padding: 8px;
+								left: 0;
+								position: absolute;
+								top: 23px;
+								display: block;
+							}
+						}
+						.slick-next{
+							position: absolute;
+							top: 50%;
+							bottom: 0;
+							right: 0;
+							z-index: 9;
+							margin-top: -20px;
+							font-size: $font-size0;
+							border: none;
+							background: none;
+							&:before {
+								content: url(../images/icons/next-arrow.svg);
+								background: rgba(0,0,0,0.8);
+								padding: 8px;
+								right: 0;
+								position: absolute;
+								top: 23px;
+								display: block;
+							}
+						}
+					}
+				}
+			}
+			.datum_project_detail{
+				padding: 5px 10px 10px 10px;
+				.datum_project_title {
+					border-bottom: 1px $solid-border $grey-color;
+					.datum_project_content {
+						margin-bottom: 8px;
+						min-height: 77px;
+						width: 60%;
+						p{
+							margin: 0;
+							white-space: nowrap;
+					  		overflow: hidden;
+					  		text-overflow: ellipsis;
+							@media #{$mini-laptop-device} {                  
+								font-size: $font-size14;
+							}	
+						}
+						.datum_inner_title {
+						    white-space: nowrap;
+						    overflow: hidden;
+						    text-overflow: ellipsis;
+						    padding-right: 10px;
+						    @media #{$mini-laptop-device} {                  
+								font-size: $font-size14;
+							}
+						}
+						.datum_project_company {
+							margin-top: 5px;
+							display: inline-block;
+						}
+					}
+					.datum_project_price{
+						font-weight: $font-bold;
+						font-size: $font-size18;
+						width: 40%;
+						text-align: right;
+						@media #{$mini-laptop-device} {                  
+							font-size: $font-size16;
+						}
+					}
+				}
+				.datum_sub-detail {
+				    display: flex;
+				    padding-top: 10px;
+				    justify-content: space-between;
+				    .datum_project_type{
+				    	font-size: $font-size15;
+				    	font-weight: $font-semibold;
+				    	color: $black;
+				    	white-space: nowrap;
+  						overflow: hidden;
+  						text-overflow: ellipsis;
+  						width: 100%;
+  						text-align: left;
+				    }
+				    .datum_due_date{
+				    	font-size: $font-size15;
+				    	font-weight: $font-semibold;
+				    	color: $black;
+				    	white-space: nowrap;
+  						overflow: hidden;
+  						text-overflow: ellipsis;
+  						width: 100%;
+  						text-align: right;
+				    }
+				}
+			}
+		}
+		
+	}
+}

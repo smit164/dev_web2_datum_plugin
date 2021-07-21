@@ -1,0 +1,26 @@
+
+body {
+    direction: $text-direction;
+    text-align: $start;
+
+    /* For different image in your code, you can use this solution. Use
+       background-image: url(../../img/#{$text-direction}/bg.png);
+       background-position: $start top; */
+
+	@include if-ltr {
+		//line-height: 18px;
+	}
+	@include if-rtl {
+		//line-height: 22px;
+		
+	}
+}
+
+.next {
+	content: dir-check('>', '<'); 
+}
+
+
+
+
+

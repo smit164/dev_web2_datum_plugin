@@ -1,0 +1,121 @@
+.datum_share_icon {
+    position: relative;
+    transition: all 0.5s ease 0s;
+    opacity: 1;
+    z-index: 1;
+    .datum_share_button{
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        transition: 0.4s;
+        position: relative;
+        text-align: center;
+        color: #FFFFFF;
+        cursor: pointer;
+        a {
+            -webkit-transition: 0.4s;
+            -moz-transition: 0.4s;
+            transition: 0.4s;
+            opacity: 0;
+            width: 0px;
+            height: 0px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            background: #FFFFFF;
+            font-size: 24px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 10px 0 rgba(0, 0, 0, 0.22);
+            cursor: pointer;
+            padding: 0px !important;
+            &:hover {
+                box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.28), 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+            }
+            &:nth-child(2) {
+                -webkit-transition-delay: 0.3s;
+                -moz-transition-delay: 0.3s;
+                transition-delay: 0.3s;
+                position: absolute;
+                right: 30px;
+                bottom: 30px;
+                background-color: #3b5998;
+            }
+            &:nth-child(3) {
+                -webkit-transition-delay: 0.4s;
+                -moz-transition-delay: 0.4s;
+                transition-delay: 0.4s;
+                position: absolute;
+                right: 30px;
+                bottom: 30px;
+                background-color: #1DA1F2;
+            }
+            &:nth-child(4) {
+                -webkit-transition-delay: 0.5s;
+                -moz-transition-delay: 0.5s;
+                transition-delay: 0.5s;
+                position: absolute;
+                right: 30px;
+                bottom: 30px;
+                background-color: #cd486b;
+            }
+            &:nth-child(5) {
+                -webkit-transition-delay: 0.6s;
+                -moz-transition-delay: 0.6s;
+                transition-delay: 0.6s;
+                position: absolute;
+                right: 30px;
+                bottom: 30px;
+                background-color: #0077b5;
+                
+            }
+            &:nth-child(6) {
+                -webkit-transition-delay: 0.7s;
+                -moz-transition-delay: 0.7s;
+                transition-delay: 0.7s;
+                position: absolute;
+                right: 30px;
+                bottom: 30px;
+                background-color: #BB001B;
+            }
+            &:nth-child(7) {
+                -webkit-transition-delay: 0.7s;
+                -moz-transition-delay: 0.7s;
+                transition-delay: 0.7s;
+                position: absolute;
+                right: 30px;
+                bottom: 30px;
+                background-color: #202020;
+            }
+        }
+        &:hover {
+            a {
+                opacity: 1;
+                width: 40px;
+                height: 40px;
+                padding-top: 8px;
+                &:nth-child(2) {
+                    right: -20px;
+                    bottom: 66px;
+                }
+                &:nth-child(3) {
+                    right: 25px;
+                    bottom: 53px;
+                }
+                &:nth-child(4) {
+                    right: 60px;
+                    bottom: 15px;
+                }
+                &:nth-child(5) {
+                    right: 60px;
+                    bottom: -30px;
+                }
+                &:nth-child(6) {
+                    right: 25px;
+                    bottom: -65px;
+                }
+                &:nth-child(7) {
+                    right: -20px;
+                    bottom: -80px;
+                }
+            }
+        }
+    }    
+}

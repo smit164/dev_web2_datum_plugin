@@ -1,0 +1,121 @@
+.datum_deal_team_section {
+	display: flex;
+	flex-wrap: wrap;
+	.datum_row {
+		width: 100%;
+		.datum_deskdevice_6{
+			@media #{$tablet-device} {                  
+	        	-ms-flex: 0 0 50%;
+		        flex: 0 0 50%;
+		        max-width: 50%;
+		        padding-right: 15px !important;
+		    }
+		}
+	}
+	.datum_teamMember_box {
+		display: flex;
+		align-items: center;
+		border-bottom: 2px $solid-border $blue-color;
+		margin-top: 20px;
+		@media #{$desktop-device} {                  
+    		display: block;
+  		}
+		@media #{$large-mobile} {                  
+    		display: block;
+    		box-shadow: none;
+    		border-bottom: 0px $solid-border $blue-color;
+  		}
+  		> a{
+  			width: 140px;
+			height: 161px;
+			img{
+	  			width: 140px;
+				height: 161px;
+				display: flex;
+				align-items: flex-end;
+				object-fit: cover;
+	  			@media #{$large-mobile} {                  
+			    	margin: 0 auto;
+			    	display: table;
+			    	margin-bottom: 7px;
+	  			}
+			}
+		}
+		.datum_team_content {
+			padding-left: 5px;
+			line-height: 20px;
+			width: 53%;
+			@media #{$desktop-device} {                  
+    			width: 100%;
+    			margin: 5px 0; 
+  			}
+			@media #{$large-mobile} {                  
+	    		width: 100%;
+	    		display: table;
+	    		margin: 0 auto;
+	    		text-align: center;
+	    		border-top: 2px $solid-border $blue-color;
+				margin-top: -7px;
+				padding-top: 15px;
+  			}
+			h4 {
+				margin: 0;
+				line-height: 15px;
+				a {
+					color: $blue-color;
+					text-transform: uppercase;
+					font-size: $font-size14;
+					margin-bottom: 0;
+					font-weight: $font-semibold;
+				}
+			}
+			p {
+				margin: 0;
+				color: $black;
+				font-size: $font-size14;
+				white-space: nowrap;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    line-height: 16px;
+			    @media #{$large-mobile} {                  
+		    		white-space: unset;
+		    		width: auto;
+		    		word-break: break-all;
+  				}
+				a {
+					color: $black;
+					font-weight: $font-medium;
+				}
+				&.datum_agent_designation{
+					color: #4a4f55;
+					margin-bottom: 0;
+					height: 42px;
+					margin-bottom: 20px;
+					@media #{$large-mobile} {                  
+			    		margin-bottom: 5px;
+			    		height: auto;
+  					}
+				}
+			}
+			a{
+				font-size: $font-size14;
+				color: $black;
+				@media #{$desktop-device} {                  
+		    		display: block;
+  				}
+				@media #{$large-mobile} {                  
+		    		display: block;
+  				}
+				&.datum-mail-link{
+					font-weight: $font-semibold;
+					width: 100%;
+					display: inline-block;
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+					line-height: 18px;
+				}
+			}
+		}
+	}
+}
